@@ -1,7 +1,11 @@
+import Navbar from "./navbar/navbar"
+import { Page } from "./pageLayout.styled"
 
 function PageLayout() {
   return (
-    <div>PageLayout</div>
+    <Page >
+        <Navbar />
+    </Page>
   )
 }
 

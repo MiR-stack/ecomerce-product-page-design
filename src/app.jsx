@@ -1,6 +1,14 @@
 
+import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+import Product from "./pages/product/product";
+import product from './data'
+
 const App = ()=>{
-    return <div>this app</div>
+    return <Router>
+        <Routes>
+            <Route path="/" element={<Product product={product} />} />
+        </Routes>
+    </Router>
 }
 
 
