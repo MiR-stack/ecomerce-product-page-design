@@ -1,15 +1,21 @@
-
-import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Product from "./pages/product/product";
-import product from './data'
+import product from "./data";
+import useCart from "./hooks/useCart";
+import { createContext } from "react";
 
-const App = ()=>{
-    return <Router>
+export const CartContext = createContext();
+
+const App = () => {
+  return (
+    <CartContext.Provider value={useCart()}>
+      <Router>
         <Routes>
-            <Route path="/" element={<Product product={product} />} />
+          <Route path="/" element={<Product data={product} />} />
         </Routes>
-    </Router>
-}
-
+      </Router>
+    </CartContext.Provider>
+  );
+};
 
 export default App;

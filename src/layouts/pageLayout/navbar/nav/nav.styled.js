@@ -13,6 +13,7 @@ const Nav = styled.div`
   align-items: center;
   gap: 20px;
   text-transform: capitalize;
+  z-index: 99;
 
   @media (max-width: 700px) {
     position: fixed;

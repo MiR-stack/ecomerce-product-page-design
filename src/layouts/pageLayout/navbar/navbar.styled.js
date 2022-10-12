@@ -8,9 +8,11 @@ const Container = styled.nav`
   justify-content: flex-start;
   gap: 40px;
   border-bottom: 1px solid hsl(219, 9%, 45%);
-
+  margin:0 30px;
   @media (max-width: 700px) {
     justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: none;
   }
 `;
 

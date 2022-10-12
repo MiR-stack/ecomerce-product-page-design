@@ -1,12 +1,13 @@
-import Navbar from "./navbar/navbar"
-import { Page } from "./pageLayout.styled"
+import Navbar from "./navbar/navbar";
+import { Page } from "./pageLayout.styled";
 
-function PageLayout() {
+function PageLayout({ children }) {
   return (
-    <Page >
+      <Page>
         <Navbar />
-    </Page>
-  )
+       {children}
+      </Page>
+  );
 }
 
-export default PageLayout
+export default PageLayout;

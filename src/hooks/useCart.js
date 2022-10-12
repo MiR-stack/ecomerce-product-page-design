@@ -8,7 +8,7 @@ const useCart = () => {
   };
 
   const removeProduct = (id) => {
-    const Products = products.filter((product) => product.id !== id);
+    const Products = products.filter((product) => product.orderId !== id);
     setProducts(Products);
   };
 

@@ -1,25 +1,33 @@
 import { useState } from "react";
+import TransparentBg from "../../../components/transparentBg/transparentBg";
 import Cart from "./cart/cart";
 import Nav from "./nav/nav";
-import { Container, User, Wraper, Auth, Brand_name, Brand_wraper ,Menu_Icon} from "./navbar.styled";
-
+import {
+  Container,
+  User,
+  Wraper,
+  Auth,
+  Brand_name,
+  Brand_wraper,
+  Menu_Icon,
+} from "./navbar.styled";
 
 const Navbar = () => {
+  const [nav, setNav] = useState(false);
 
-    const [nav,setNav] = useState(false)
-
-    function handleNav (){
-        setNav(!nav)
-    }
+  function handleNav() {
+    setNav(!nav);
+  }
 
   return (
     <Container>
-       <Brand_wraper >
-        <Menu_Icon  onClick={handleNav} />
-       <Brand_name to='/'>sneakers</Brand_name>
-       </Brand_wraper>
+      {nav && <TransparentBg handleTriger={handleNav} />}
+      <Brand_wraper>
+        <Menu_Icon onClick={handleNav} />
+        <Brand_name to="/">sneakers</Brand_name>
+      </Brand_wraper>
       <Wraper>
-        <Nav nav={nav} handleNav={handleNav}/>
+        <Nav nav={nav} handleNav={handleNav} />
         <Auth>
           <Cart />
           <User>

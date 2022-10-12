@@ -5,7 +5,30 @@ import { ReactComponent as Cart } from "../../../../assets/images/icon-cart.svg"
 const Container = styled.div`
   position: relative;
   padding: 20px 0;
+  z-index: 2;
 `;
+
+
+const Cart_logo_wraper = styled.div`
+position: relative;
+`
+
+const Item = styled.span`
+  position:absolute;
+  top:-25%;
+  right: -25%;
+  background-color: #ff7d1a;
+  color:white;
+  border-radius: 50%;
+  font-size: 10px;
+  min-height:18px;
+  min-width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+
+`
 
 const Cart_logo = styled(Cart)`
   cursor: pointer;
@@ -57,4 +80,4 @@ const Chekout = styled(Link)`
   text-align: center;
 `;
 
-export { Container, Cart_logo, CartBody, Title, Empty, Wraper, Chekout };
+export { Container,Cart_logo_wraper,Item, Cart_logo, CartBody, Title, Empty, Wraper, Chekout };
